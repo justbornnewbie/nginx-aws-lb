@@ -8,7 +8,7 @@ pipeline{
                 '''
             }
         }*/
-        stage("ansible-run"){
+        stage("kubernetes-run"){
             steps{
                 sh '''
                 cd k8
