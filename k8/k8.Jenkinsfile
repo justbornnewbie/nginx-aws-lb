@@ -12,11 +12,11 @@ pipeline{
             steps{
                 sh '''
                 cd k8
-                kubeclt delete -f nginx-deploy.yml | exit 0
-                kubeclt apply -f nginx-deploy.yml
+                kubectl delete -f nginx-deploy.yml | exit 0
+                kubectl apply -f nginx-deploy.yml
 
-                #/root/.kube/config
-                
+                #copy k8master config file to piserver:/root/.kube/config
+
                 
                 '''
             }
