@@ -11,6 +11,7 @@ pipeline{
         stage("ansible-run"){
             steps{
                 sh '''
+                cd ansi
                 ansible-playbook -i hosts -vv httpd.yml
                 
                 '''
