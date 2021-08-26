@@ -1,0 +1,18 @@
+- hosts: all
+  tasks:
+    - name: Install the latest version of Apache
+      apt:
+        name: nginx
+        state: latest
+
+    - name: Start and enable httpd
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: exec shell
+      shell: |
+        #yum install epel-release -y
+        #yum install nginx -y
+        touch /root/ansiblefile
