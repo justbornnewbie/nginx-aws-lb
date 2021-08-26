@@ -1,5 +1,5 @@
 pipeline{
-    agent { label "master" }
+    agent { label "piserver" }
     stages{
         /*stage("git-checkout"){
             steps{
